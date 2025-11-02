@@ -1,0 +1,57 @@
+.container { /* Define onde vou conter as coisas quando vou construir o meu HTML */
+    --max-width: 375px; /* Olha primeiro para o mobile */
+    width: min(var(--max-width), 100% - var(--padding-x-inline-lg) * 2);
+    margin-inline: auto; /* Sem isso ele coloca os dois espaços do mesmo lado, o margin auto faz com que o elemento fique centralizado */
+}
+
+.padding-y-base {
+    padding-block: var(--padding-y-base);
+}
+
+.padding-y-lg {
+    padding-block: var(--padding-y-lg);
+}
+
+.padding-y-xl {
+    padding-block: var(--padding-y-xl);
+}
+
+.padding-x-inline-lg {
+    padding-inline: var(--padding-x-inline-lg);
+}
+
+.desktop-only {
+    display: none;
+}
+
+.even-columns {
+    display: grid;
+    gap: 1rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.gap-1 {
+    gap: 1rem;
+}
+
+.grid {
+    display: grid;
+}
+
+@media (width >= 80em) {
+    .container {
+        --max-width: 80rem;
+    }
+
+    .desktop-only {
+        display: initial;
+    }
+
+    .even-columns {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+}

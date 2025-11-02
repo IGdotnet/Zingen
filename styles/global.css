@@ -32,6 +32,12 @@
     --font-size-lg: 1.25rem;
     --font-size-xl: 1.5rem;
     --font-size-2xl: 2.5rem;
+
+    --padding-y-base: 1rem;
+    --padding-y-lg:1.5rem;
+    --padding-y-xl: 3rem;
+
+    --padding-x-inline-lg: 1.5rem;
 }
 
 html {
@@ -70,14 +76,32 @@ a {
     color: inherit;
 }
 
+a:hover {
+    background: linear-gradient(
+        90deg,
+        var(--brand-color-secondary) 0%,
+        var(--brand-color-primary) 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
 ul[role="list"] { /* Para alguns navegadores, quando removemos direto da UL ele perde o sentido de ser uma lista, por isso utilizamos o role, e a bolinha só some porque tiramos o padding e o margin, se no HTML eu não colocar o role="list" o list-style será mantido */
     list-style: none;
 }
 
 @media (width >= 80em) { /* Fazendo 80*16 obtemos o tamanho da tela, que nessa caso dará 1280px, o EM sempre leva em conta o tamanho da fonte do root */
     :root {
-    --font-size-lg: 2rem;
-    --font-size-xl: 3rem;
-    --font-size-2xl: 4rem;
+        --font-size-lg: 2rem;
+        --font-size-xl: 3rem;
+        --font-size-2xl: 4rem;
+
+        --padding-y-base: 1.5rem;
+        --padding-y-lg: 2.5rem;
+        --padding-y-xl: 5rem;
+
+        --padding-x-inline-lg: 2rem;
     }
 }
