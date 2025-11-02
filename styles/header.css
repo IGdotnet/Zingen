@@ -1,5 +1,11 @@
 header {
+    /* & a:nth-child(2) { usando assim também da certo, mas apenas no desktop, já que no mobile não temos os links do header
+        margin-left: auto;
+    } */
+
     & a:first-child {
         margin-right: auto;
     }
+
+    
 }
