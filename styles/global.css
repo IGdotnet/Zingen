@@ -92,6 +92,11 @@ ul[role="list"] { /* Para alguns navegadores, quando removemos direto da UL ele 
     list-style: none;
 }
 
+img {
+    max-width: 100%;
+    display: inline-block;
+}
+
 @media (width >= 80em) { /* Fazendo 80*16 obtemos o tamanho da tela, que nessa caso dará 1280px, o EM sempre leva em conta o tamanho da fonte do root */
     :root {
         --font-size-lg: 2rem;
